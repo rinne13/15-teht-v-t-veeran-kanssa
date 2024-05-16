@@ -1,0 +1,222 @@
+:root {
+  --background-color: cornsilk;
+  --primary-color: skyblue;
+  --secondary-color: sandybrown;
+  --gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 2%, rgba(154,7,117,0.8562018557422969) 36%, rgba(110,66,156,0.7329525560224089) 67%, rgba(33,169,226,1) 84%, rgba(0,212,255,1) 100%);
+}
+
+body {
+  background: var(--gradient);
+  background-size: 400% 400%;
+  font-family: "Spartan", sans-serif;
+  margin: 3rem;
+  animation: bg_gradient 15s ease infinite;
+}
+
+@keyframes bg_gradient {
+
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fifth-task {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  background: goldenrod;
+}
+
+.fifth-task h3 {
+  padding: 25px;
+}
+
+/*LEFT SIDE*/
+
+.fifth-task h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-left: 3px solid #fc5185;
+  top: 0;
+  left: 0;
+  bottom: 200px;
+  transition: all 1s;
+}
+
+.fifth-task:hover h3::before {
+  bottom: 0;
+
+}
+
+/*TOP SIDE*/
+
+.fifth-task::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 3px solid #fc5185;
+  top: 0;
+  left: 0;
+  right: 200px;
+  bottom: 0;
+  transition: all 1s;
+}
+
+.fifth-task:hover::before {
+  right: 0;
+}
+
+/*RIGHT SIDE*/
+
+.fifth-task h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-right: 3px solid #fc5185;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 200px;
+  transition: all 1s;
+}
+
+.fifth-task:hover h3::after{
+  top: 0;
+}
+
+/*BOTTOM SIDE*/
+
+.fifth-task::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 3px solid #fc5185;
+  top: 0;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  transition: all 1s;
+}
+
+.fifth-task:hover::after {
+  left: 0;
+}
+
+.animated-circle {
+  background: var(--primary-color);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 0 5px #333;
+  animation: example 5s infinite;
+
+}
+
+
+@keyframes example {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+      top: 0;
+      left: 300px;
+      background: var(--background-color);
+      border-radius: 40%;
+  }
+  50% {
+    top: 300px;
+    left: 300px;
+    background-color: #fc5185;
+    border-radius: 2px;
+
+
+  }
+  75% {
+    top: 300px;
+    left: 0;
+    background: green;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: pink;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.first-task {
+  background: var(--secondary-color);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  transition: all 5s;
+}
+
+.first-task:hover {
+  background: pink;
+  width: 300px;
+  height: 300px;
+  /* Change background color and make circle bigger here */
+}
+
+.second-task {
+  background: var(--secondary-color);
+  height: 100px;
+  width: 100px;
+  transition: all 5s;
+}
+
+.second-task:hover {
+  background: pink;
+  rotate: 180deg;
+}
+
+.third-task {
+  background: var(--secondary-color);
+  height: 100px;
+  width: 100px;
+  padding: 1rem;
+  transition: all 5s;
+  /* Add transition here */
+}
+.third-task:hover {
+  height: 75px;
+  width: 75px;
+  
+}
+
+.third-task p {
+  display: none;
+  transition: all 5s;
+}
+
+.third-task:hover p {
+  display: block; 
+  color: #fc5185;
+}
+
+
+
+*/
